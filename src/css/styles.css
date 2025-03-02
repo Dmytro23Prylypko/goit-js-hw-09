@@ -1,18 +1,112 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 24px;
+  list-style: none;
+}
+.gallery-item {
+  flex-basis: calc((100% - 24px * 2) / 3);
+}
+.gallery-link {
+}
+.gallery-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-in-out 0.05s;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.lightbox-wrapper {
+  background: rgba(46, 47, 66, 0.8);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  /* line-height: 24px; */
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 408px;
+  padding: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  input {
+    margin-bottom: 8px;
+  }
+
+  textarea {
+    margin-bottom: 16px;
+  }
+
+  input,
+  textarea {
+    border: 1px solid #808080;
+    border-radius: 4px;
+    padding: 8px 16px;
+    max-width: 100%;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+  }
+
+  input:hover,
+  input:focus,
+  textarea:hover,
+  textarea:focus {
+    border: 1px solid #000;
+  }
+
+  input:active,
+  textarea:active {
+    border: 1px solid #808080;
+  }
+
+  button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    max-width: 95px;
+    height: 40px;
+    background: #4e75ff;
+    cursor: pointer;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  button:hover,
+  button:focus {
+    background: #6c8cff;
+  }
+}
